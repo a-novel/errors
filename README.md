@@ -1,5 +1,9 @@
 # Errors
 
+```
+go get github.com/a-novel/errors
+```
+
 A simple package for better errors handling. It assigns a string ID to each error for better parsing. It is also
 duck typed with Go error for interoperability.
 
