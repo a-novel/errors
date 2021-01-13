@@ -17,21 +17,21 @@ import (
 )
 
 func main() {
-	err := errors.New("uniq_id", "something happened")
-	
-	// ... 
-	
-	fmt.Print(err.Error()) // something happened
-	fmt.Print(err.ID == "uniq_id") // true
-
-	switch err.ID {
-	case "uniq_id":
-		// Do something.
+    err := errors.New("uniq_id", "something happened")
+    
+    // ... 
+    
+    fmt.Print(err.Error()) // something happened
+    fmt.Print(err.ID == "uniq_id") // true
+    
+    switch err.ID {
+    case "uniq_id":
+        // Do something.
     case "uniq_id_2":
         // Do something else.
-	default:
+    default:
         // Unknown/Unhandled error.
-	}
+    }
 }
 ```
 
