@@ -55,7 +55,7 @@ import (
 func main() {
 	err := errors.NewWithData("uniq_id", "something happened", time.Now().UnixNano())
 
-	fmt.Printf("error %s occured at %v timestamp", err.ID, err.Data.(int64)) // true
+	fmt.Printf("error %s occured at %v timestamp", err.ID, err.Data.(int64))
 }
 ```
 
