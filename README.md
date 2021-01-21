@@ -35,6 +35,31 @@ func main() {
 }
 ```
 
+## Special data
+
+For better readability and handling, you can add some optional data to an error, that will not appear in the error
+message, but can be handled specifically by some party.
+
+This additional data field is an interface, so you can assign any Go type to it, and retrieve it easily with type
+assertion.
+
+```go
+package myPackage
+
+import
+import (
+	"fmt"
+	"github.com/a-novel/errors"
+	"time"
+)
+
+func main() {
+	err := errors.NewWithData("uniq_id", "something happened", time.Now().UnixNano())
+
+	fmt.Printf("error %s occured at %v timestamp", err.ID, err.Data.(int64)) // true
+}
+```
+
 # License
 
 Distributed under [Apache License 2.0](https://www.github.com/a-novel/errors/blob/master/LICENSE)
