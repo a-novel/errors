@@ -46,7 +46,6 @@ assertion.
 ```go
 package myPackage
 
-import
 import (
 	"fmt"
 	"github.com/a-novel/errors"
